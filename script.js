@@ -132,6 +132,44 @@ const statsBar = document.querySelector('.stats-bar');
 if (statsBar) statsObserver.observe(statsBar);
 
 /* ===================================
+   IMAGE MODAL
+=================================== */
+const modal      = document.getElementById('modal');
+const modalImg   = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalClose = document.getElementById('modal-close');
+
+function openModal(src, title) {
+  modalImg.src = src;
+  modalImg.alt = title;
+  modalTitle.textContent = title;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.project-link[data-image]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    openModal(link.dataset.image, link.dataset.title);
+  });
+});
+
+modalClose.addEventListener('click', closeModal);
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) closeModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ===================================
    MARQUEE — PAUSE ON HOVER
 =================================== */
 const marqueeTrack = document.querySelector('.marquee-track');

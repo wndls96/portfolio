@@ -82,8 +82,9 @@
     <div class="works-grid">
 
       <article class="project-card">
-        <a href="#" class="project-link">
-          <div class="project-img" style="background: linear-gradient(145deg, #0d0d1a 0%, #1a1a3e 50%, #0f3060 100%);">
+        <a href="#" class="project-link" data-image="notebooklm.png" data-title="Noir Coffee Brand Identity">
+          <div class="project-img">
+            <img src="notebooklm.png" alt="Noir Coffee Brand Identity">
             <div class="project-overlay">
               <span class="overlay-text">View Project</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -285,6 +286,19 @@
     <span>© 2026 ONA. All rights reserved.</span>
     <span>Designed with purpose.</span>
   </footer>
+
+  <!-- Image Modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" aria-label="닫기">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="modal-inner">
+      <img class="modal-img" id="modal-img" src="" alt="">
+      <p class="modal-title" id="modal-title"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
