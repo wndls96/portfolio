@@ -194,7 +194,6 @@ a { text-decoration: none; color: inherit; }
 
 .hero-title .line:nth-child(1) .line-inner { animation-delay: 0.15s; }
 .hero-title .line:nth-child(2) .line-inner { animation-delay: 0.28s; }
-.hero-title .line:nth-child(3) .line-inner { animation-delay: 0.41s; }
 
 .hero-title .italic {
   font-style: italic;
